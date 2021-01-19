@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-
+import { CartIcon } from "./Carticon";
 export const Navbar = () => {
 	return (
 		<div className="container">
@@ -16,12 +14,9 @@ export const Navbar = () => {
 					</span>
 				</Link>
 
-				<p className="counter">3</p>
 				{/* IT SHOULD BE LINKED TO THE CART VIEW */}
-				<Link to="/demo">
-					<button className="btn">
-						<FontAwesomeIcon icon={faShoppingCart} />
-					</button>
+				<Link to="/Cart">
+					<CartIcon value={3} />
 				</Link>
 			</nav>
 		</div>
